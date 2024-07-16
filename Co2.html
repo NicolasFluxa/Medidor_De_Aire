@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Grafico Dioxido de Carbono</title>
+</head>
+<body>
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="casa" name="home-sharp"></ion-icon>
+                <span id="volver-vista-general">AirQuality</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="pm10.html">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        <span>Pm-10</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pm25.html">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <span>Pm-2.5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Temperatura.html">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <span>Temperatura</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Ozono.html">
+                        <i class="fa-solid fa-sun-plant-wilt"></i>
+                        <span>Ozono</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Humedad.html">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span>Humedad</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="co2" href="CO2.html">
+                        <i class="fa-solid fa-smog"></i>
+                        <span>Dioxido de Carbono</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+            <div class="info">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+            <div class="switch">
+                <div class="base">
+                    <div class="circulos">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario" >
+            <img src="figuras/image.png" alt="usuario">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">pepito31</span>
+                    <span class="email">pepito31@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <main class="bodygrafico">
+        <div class="informacion">
+            <h1>Información sobre el dioxido de Carbono</h1>
+            <section class="info-section">
+                <h2>¿Qué es el Dioxido de Carbono?</h2>
+                <p>El dióxido de carbono es un gas incoloro e inodoro que es un componente natural del aire. Se produce principalmente a través de la respiración humana y la combustión de combustibles fósiles.</p>
+            </section>
+            <section class="info-section">
+                <h2>¿Cuándo es peligroso el Dioxido de Carbono?</h2>
+                <p>El dióxido de carbono es peligroso en altas concentraciones. Niveles elevados (por encima de 1000 ppm) pueden causar somnolencia, dolores de cabeza y, en concentraciones muy altas (por encima de 5000 ppm), puede ser tóxico y provocar la pérdida de conciencia o la muerte.</p>
+            </section>
+            <div class="grafico-section">
+                <h2>Gráfico de Dioxido de Carbono</h2>
+                <div class="chart-container">
+                    <canvas id="Co2"></canvas>
+                </div>
+            </div>
+        </div>
+        <section class="informacion-adicional">
+            <h2>Recursos adicionales sobre el Dióxido de Carbono (CO2)</h2>
+            <ul>
+                <li><a href="https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health">Organización Mundial de la Salud: Cambio climático y salud</a></li>
+                <li><a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Agencia de Protección Ambiental de EE.UU.: Información sobre gases de efecto invernadero</a></li>
+                <li><a href="https://climate.nasa.gov/causes/">NASA: Causas del cambio climático</a></li>
+            </ul>
+        </section>
+        
+        <section class="tips">
+            <h2>Consejos para reducir la exposición al CO2</h2>
+            <ul>
+                <li>Ventila bien los espacios cerrados para permitir la circulación de aire fresco.</li>
+                <li>Planta árboles y otras plantas para ayudar a absorber el CO2 del aire.</li>
+                <li>Reduce el uso de vehículos de combustión y opta por medios de transporte más sostenibles.</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Co2.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

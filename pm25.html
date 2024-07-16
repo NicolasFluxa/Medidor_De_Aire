@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePM25.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>vista general</title>
+</head>
+<body>
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="casa" name="home-sharp"></ion-icon>
+                <span id="volver-vista-general">AirQuality</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="pm10.html">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        <span>Pm-10</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="Pm25" href="pm25.html">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <span>Pm-2.5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Temperatura.html">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <span>Temperatura</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Ozono.html">
+                        <i class="fa-solid fa-sun-plant-wilt"></i>
+                        <span>Ozono</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Humedad.html">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span>Humedad</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="CO2.html">
+                        <i class="fa-solid fa-smog"></i>
+                        <span>Dioxido de Carbono</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+            <div class="info">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+            <div class="switch">
+                <div class="base">
+                    <div class="circulos">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario" >
+            <img src="figuras/image.png" alt="usuario">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">pepito31</span>
+                    <span class="email">pepito31@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <main class="bodygrafico">
+        <div class="informacion">
+            <h1>Información sobre PM2.5</h1>
+            <section class="info-section">
+                <h2>¿Qué son las partículas PM 2.5?</h2>
+                <p>Las partículas PM2.5 son partículas finas con un diámetro de 2.5 micrómetros o menos. Estas partículas son lo suficientemente pequeñas para penetrar profundamente en los pulmones y entrar en el sistema circulatorio.</p>
+            </section>
+            <section class="info-section">
+                <h2>¿Cuándo son peligrosas las partículas PM 2.5?</h2>
+                <p>Las partículas PM2.5 son particularmente peligrosas debido a su capacidad de penetrar profundamente en el sistema respiratorio y cardiovascular. La exposición a altos niveles puede causar enfermedades respiratorias, ataques cardíacos y cáncer de pulmón. La OMS recomienda que la exposición media anual no supere los 10 µg/m³ y la exposición diaria no supere los 25 µg/m³.</p>
+            </section>
+            <div class="grafico-section">
+                <h2>Gráfico de PM 2.5</h2>
+                <div class="chart-container">
+                    <canvas id="PM25"></canvas>
+                </div>
+            </div>
+        </div>
+        <section class="informacion-adicional">
+            <h2>Recursos adicionales sobre PM2.5</h2>
+            <ul>
+                <li><a href="https://www.who.int/health-topics/air-pollution#tab=tab_1">Organización Mundial de la Salud: Contaminación del aire</a></li>
+                <li><a href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics#PM2.5">Agencia de Protección Ambiental de EE.UU.: Información sobre PM2.5</a></li>
+                <li><a href="https://www.airnow.gov">AirNow: Información y datos en tiempo real sobre la calidad del aire</a></li>
+            </ul>
+        </section>
+        
+        <section class="tips">
+            <h2>Consejos para reducir la exposición a PM2.5</h2>
+            <ul>
+                <li>Evita salir al aire libre cuando los niveles de PM2.5 son altos.</li>
+                <li>Usa purificadores de aire en interiores para reducir la contaminación del aire dentro de casa.</li>
+                <li>Evita quemar madera o basura, ya que pueden aumentar los niveles de PM2.5.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="pm25.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

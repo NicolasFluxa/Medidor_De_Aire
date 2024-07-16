@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleOzono.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>vista general</title>
+</head>
+<body>
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="casa" name="home-sharp"></ion-icon>
+                <span id="volver-vista-general">AirQuality</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="pm10" href="pm10.html">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        <span>Pm-10</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pm25.html">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <span>Pm-2.5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Temperatura.html">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <span>Temperatura</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="ozono" href="Ozono.html">
+                        <i class="fa-solid fa-sun-plant-wilt"></i>
+                        <span>Ozono</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Humedad.html">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span>Humedad</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="CO2.html">
+                        <i class="fa-solid fa-smog"></i>
+                        <span>Dioxido de Carbono</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+            <div class="info">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+            <div class="switch">
+                <div class="base">
+                    <div class="circulos">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario" >
+            <img src="figuras/image.png" alt="usuario">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">pepito31</span>
+                    <span class="email">pepito31@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <main class="bodygrafico">
+        <div class="informacion">
+            <h1>Información sobre el ozono</h1>
+            <section class="info-section">
+                <h2>¿Qué son las partículas de ozono?</h2>
+                <p>El ozono a nivel del suelo es un gas compuesto de tres átomos de oxígeno. Se forma a partir de reacciones químicas entre óxidos de nitrógeno y compuestos orgánicos volátiles en presencia de luz solar.</p>
+            </section>
+            <section class="info-section">
+                <h2>¿Cuándo son peligrosas las particulas de ozono?</h2>
+                <p>El ozono es peligroso cuando sus niveles son elevados, ya que puede irritar las vías respiratorias, causar problemas respiratorios y agravar enfermedades pulmonares como el asma. La Agencia de Protección Ambiental de EE.UU. (EPA) establece un límite de 70 ppb (partes por billón) para la exposición promedio de 8 horas.</p>
+            </section>
+            <div class="grafico-section">
+                <h2>Gráfico de ozono en el ambiente</h2>
+                <div class="chart-container">
+                    <canvas id="Ozono"></canvas>
+                </div>
+            </div>
+        </div>
+        <section class="informacion-adicional">
+            <h2>Recursos adicionales sobre el Ozono</h2>
+            <ul>
+                <li><a href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health">Organización Mundial de la Salud: Calidad del aire exterior y salud</a></li>
+                <li><a href="https://www.epa.gov/ozone-pollution">Agencia de Protección Ambiental de EE.UU.: Información sobre la contaminación por ozono</a></li>
+                <li><a href="https://www.airnow.gov">AirNow: Información y datos en tiempo real sobre la calidad del aire</a></li>
+            </ul>
+        </section>
+        
+        <section class="tips">
+            <h2>Consejos para reducir la exposición al Ozono</h2>
+            <ul>
+                <li>Evita actividades al aire libre cuando los niveles de ozono son altos, especialmente en la tarde.</li>
+                <li>Mantén las ventanas cerradas y usa aire acondicionado si es posible.</li>
+                <li>Utiliza transporte público o comparte el coche para reducir las emisiones de ozono.</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ozono.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
